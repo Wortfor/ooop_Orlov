@@ -1,4 +1,4 @@
-TYPE_OS = 1  # 1 - Windows; 2 - Linux
+TYPE_OS = 1  
 
 
 class DialogWindows:
@@ -19,6 +19,5 @@ class Dialog:
         return obj
 
 
-# Проверка
 dlg = Dialog("Моё окно")
 print(type(dlg), dlg.name, dlg.name_class)

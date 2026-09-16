@@ -10,6 +10,6 @@ class Point:
 pt = Point(3, 5)
 pt_clone = pt.clone()
 
-print(pt.x, pt.y)          # 3 5
-print(pt_clone.x, pt_clone.y)  # 3 5
-print(pt is pt_clone)      # False — это разные объекты
+print(pt.x, pt.y)          
+print(pt_clone.x, pt_clone.y)  
+print(pt is pt_clone)      

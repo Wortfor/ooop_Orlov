@@ -17,4 +17,4 @@ class Loader:
 
 ld = Loader()
 res = ld.parse_format("4, 5, -6.5", Factory())
-print(res)  # [4.0, 5.0, -6.5]
+print(res)  

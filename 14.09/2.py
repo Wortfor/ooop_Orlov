@@ -14,6 +14,6 @@ class SingletonFive:
 
 objs = [SingletonFive(str(n)) for n in range(10)]
 
-# Проверка
+
 for i, obj in enumerate(objs):
     print(i, id(obj), obj.name)

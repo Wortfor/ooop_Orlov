@@ -4,4 +4,4 @@ class AbstractClass:
 
 
 obj = AbstractClass()
-print(obj)  # Ошибка: нельзя создавать объекты абстрактного класса
+print(obj)  
