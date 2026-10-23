@@ -1,0 +1,6 @@
+# Виртуальное окружение
+.venv/
+__pycache__/
+*.pyc
+app.log
+.vscode/

@@ -1,0 +1,51 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+package "http" {
+  class Url
+  class ParseError <<exception>>
+  class Request
+  class Response
+  class Parser
+  class Serializer
+}
+
+package "net" {
+  class Socket
+  class TcpClient
+  class ConnectionError <<exception>>
+  class TimeoutError <<exception>>
+}
+
+package "client" {
+  class HttpClient
+  class HttpError <<exception>>
+}
+
+package "server" {
+  class HttpServer
+  class Router
+  class Handler <<interface>>
+}
+
+package "gui" {
+  class App
+  class ClientTab
+  class ServerTab
+  class HeaderTable
+}
+
+TcpClient --> Socket
+HttpClient --> TcpClient
+HttpClient --> Url
+HttpClient --> Parser
+HttpClient --> Serializer
+HttpServer --> Router
+Router --> Handler
+HttpServer --> Parser
+HttpServer --> Serializer
+ClientTab --> HttpClient
+ServerTab --> HttpServer
+App --> ClientTab
+App --> ServerTab
+@enduml
